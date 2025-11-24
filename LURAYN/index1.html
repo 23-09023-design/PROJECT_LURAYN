@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Movement</title>
+    <link rel="stylesheet" href="join.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" style="color:white; font-weight:600;">⬅ Back</a>
+</header>
+
+<section class="join-section">
+    <div class="join-box">
+
+        <h1 class="join-title">Join the Movement</h1>
+
+        <p class="join-text">
+            Before joining, please read and accept our Terms & Conditions to proceed.
+        </p>
+
+        <div class="terms-box">
+            <h3>Terms & Conditions</h3>
+            <p>
+                By joining LURAYN, you agree to uphold honesty, integrity, and ethical behavior.
+                You commit to fostering anti-corruption awareness and setting an example
+                for other youth in your community.
+            </p>
+        </div>
+
+        <label class="checkbox-container">
+            <input type="checkbox" id="agreeCheck">
+            <span>I accept the Terms & Conditions</span>
+        </label>
+
+        <a id="joinBtn" class="btn disabled">PROCEED</a>
+
+    </div>
+</section>
+
+<script>
+    const checkbox = document.getElementById("agreeCheck");
+    const btn = document.getElementById("joinBtn");
+
+    checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+            btn.classList.remove("disabled");
+            btn.setAttribute("href", "index.html"); // <-- go back to index.html
+        } else {
+            btn.classList.add("disabled");
+            btn.removeAttribute("href");
+        }
+    });
+</script>
+</body>
+</html>

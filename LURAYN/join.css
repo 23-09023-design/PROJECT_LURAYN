@@ -1,0 +1,110 @@
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COLOR VARIABLES */
+:root{
+    --main-color: #0d7f4a;
+    --second-color: #104f0f;
+    --text-color: #1b1b1b;
+    --bg-color: #fff;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    padding: 16px 40px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    position: fixed;
+    top: 0;
+}
+
+/* PAGE SECTION */
+.join-section{
+    min-height: 100vh;
+    padding: 120px 20px 40px;
+    background: url("background.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* BOX */
+.join-box{
+    width: 450px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* TITLES */
+.join-title{
+    font-size: 2.2rem;
+    color: var(--main-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.join-text{
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+/* TERMS BOX */
+.terms-box{
+    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.terms-box h3{
+    color: var(--main-color);
+    margin-bottom: 8px;
+}
+
+/* CHECKBOX */
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* BUTTON */
+.btn{
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background: var(--main-color);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: var(--second-color);
+}
+
+.btn.disabled{
+    background: gray;
+    cursor: not-allowed;
+}
